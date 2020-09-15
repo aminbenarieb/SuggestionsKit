@@ -35,45 +35,48 @@ public struct SuggestionsConfig {
         case above
     }
     
-    /// Configuration of buble
-    public struct BubleConfig {
-        /// If this property changed to false buble of suggestion will not be shown at all
-        let shouldDraw: Bool
-        /// Distance between body of buble and top
-        let tailHeight: CGFloat
-        /// Space between buble tail and suggested view
-        let focusOffset: CGFloat
-        /// Buble corner radius
-        let cornerRadius: CGFloat
-        /// Buble border width
-        let borderWidth: CGFloat
-        /// Buble border color
-        let borderColor: UIColor
-        /// Buble background color
-        let backgroundColor: UIColor
-        /// Buble shadow color
-        let shadowColor: UIColor
-        /// Buble shadow radius
-        let shadowRadius: CGFloat
-        /// Buble shadow opacity
-        let shadowOpacity: CGFloat
-        /// Buble shadow offset
-        let shadowOffset: CGSize
-        
-        public init(shouldDraw: Bool = true, tailHeight: CGFloat = 4, focusOffset: CGFloat = 4, cornerRadius: CGFloat = 10, borderWidth: CGFloat = 0.5, borderColor: UIColor = UIColor.clear, backgroundColor: UIColor = UIColor.white, shadowColor: UIColor = UIColor.black, shadowRadius: CGFloat = 10, shadowOpacity: CGFloat = 0.5, shadowOffset: CGSize = CGSize(width: 1, height: 1)) {
-            self.shouldDraw = shouldDraw
-            self.tailHeight = tailHeight
-            self.focusOffset = focusOffset
-            self.cornerRadius = cornerRadius
-            self.borderWidth = borderWidth
-            self.borderColor = borderColor
-            self.backgroundColor = backgroundColor
-            self.shadowColor = shadowColor
-            self.shadowRadius = shadowRadius
-            self.shadowOpacity = shadowOpacity
-            self.shadowOffset = shadowOffset
-        }
-    }
+     /// Configuration of buble
+       public struct BubleConfig {
+           /// If this property changed to false buble of suggestion will not be shown at all
+           let shouldDraw: Bool
+           /// Space between side of buble and side of suggested view
+           let sideOffset: CGFloat
+           /// Distance between body of buble and top
+           let tailHeight: CGFloat
+           /// Space between buble tail and suggested view
+           let focusOffset: CGFloat
+           /// Buble corner radius
+           let cornerRadius: CGFloat
+           /// Buble border width
+           let borderWidth: CGFloat
+           /// Buble border color
+           let borderColor: UIColor
+           /// Buble background color
+           let backgroundColor: UIColor
+           /// Buble shadow color
+           let shadowColor: UIColor
+           /// Buble shadow radius
+           let shadowRadius: CGFloat
+           /// Buble shadow opacity
+           let shadowOpacity: CGFloat
+           /// Buble shadow offset
+           let shadowOffset: CGSize
+           
+           public init(shouldDraw: Bool = true, sideOffset: CGFloat = 0, tailHeight: CGFloat = 4, focusOffset: CGFloat = 4, cornerRadius: CGFloat = 10, borderWidth: CGFloat = 0.5, borderColor: UIColor = UIColor.clear, backgroundColor: UIColor = UIColor.white, shadowColor: UIColor = UIColor.black, shadowRadius: CGFloat = 10, shadowOpacity: CGFloat = 0.5, shadowOffset: CGSize = CGSize(width: 1, height: 1)) {
+               self.shouldDraw = shouldDraw
+               self.sideOffset = sideOffset
+               self.tailHeight = tailHeight
+               self.focusOffset = focusOffset
+               self.cornerRadius = cornerRadius
+               self.borderWidth = borderWidth
+               self.borderColor = borderColor
+               self.backgroundColor = backgroundColor
+               self.shadowColor = shadowColor
+               self.shadowRadius = shadowRadius
+               self.shadowOpacity = shadowOpacity
+               self.shadowOffset = shadowOffset
+           }
+       }
     
     /// Configuration of displayed text
     public struct TextConfig {

@@ -91,9 +91,9 @@ private extension TextLayer {
             var calcX = suggFrame.midX - newSize.width / 2
             let maxCalcX = calcX + newSize.width
             if calcX < boundsToDraw.minX {
-                calcX = boundsToDraw.minX + SuggestionsObject.Constant.spaceBetweenOverlayAndText
+                calcX = boundsToDraw.minX + SuggestionsObject.Constant.spaceBetweenOverlayAndText + config.buble.sideOffset
             } else if maxCalcX > boundsToDraw.maxX {
-                calcX = boundsToDraw.maxX - newSize.width - SuggestionsObject.Constant.spaceBetweenOverlayAndText
+                calcX = boundsToDraw.maxX - newSize.width - SuggestionsObject.Constant.spaceBetweenOverlayAndText - config.buble.sideOffset
             }
             return calcX
         }()
